@@ -4,9 +4,15 @@ O **melhor** GUI de trolling para Roblox, com transformações de personagem, tr
 
 ## ⚡ Como usar
 
-1. Copie o conteúdo de [`main.lua`](main.lua) (ou use o loader).
-2. Cole no seu executor (Delta Executor, Fluxus, Hydrogen, etc.).
-3. Execute e use `RightControl` para abrir/fechar a GUI.
+Cole no seu executor (Delta Executor, Fluxus, Hydrogen, etc.) e execute. Use `RightControl` para abrir/fechar a GUI.
+
+### Opção 1 — Single-file (recomendado, 1 fetch só)
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/recex/ESP-LUA/main/release.lua"))()
+```
+
+### Opção 2 — Modular (carrega os módulos via HTTP)
 
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/recex/ESP-LUA/main/main.lua"))()
@@ -25,7 +31,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/recex/ESP-LUA/main/ma
 ## 🗂️ Estrutura
 
 ```
-main.lua                 # Loader principal
+release.lua              # Build single-file (tudo embutido, recomendado)
+main.lua                 # Loader modular
 src/
   ui/
     Interface.lua        # Biblioteca de UI nativa (ScreenGui)
